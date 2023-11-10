@@ -1,0 +1,20 @@
+#Quando for inserir novas tabelas em uma migration, coloque-as entre o id e timestamps:
+    public function up(): void
+    {
+        Schema::create('testes', function (Blueprint $table) {
+            $table->id();
+            {{Coloque o resto aqui}}
+            $table->timestamps();
+        });
+    }
+
+
+#Cria um arquivo Model com Migration, Factory, Seeder e Controller com Resource:
+    php artisan make:model {{Nome}} -mfscr
+
+#É recomendado que o "name" dos inputs deve ser o mesmo nome que está na tabela do banco de dados:
+    $table->string('password')
+    <input type="password" name="password">
+
+
+

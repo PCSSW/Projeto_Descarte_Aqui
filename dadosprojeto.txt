@@ -1,0 +1,81 @@
+=====================================================================================
+#Principais 
+
+User:
+- Dados => [ name, email, senha, cpf, telefone, tipo(Catador, Civil) ];
+- Ações => [ cadastrar, fazer_login, fazer_logout, redefinir_senha];
+
+Civil:
+- Dados => [ cep, rua, numero ];
+- Ações => [ registrar_pedido_descarte, avaliar_catador];
+
+Catador:
+- Dados => [ região, bairro, materiais de interesse ];
+- Ações => [ cadastrar_material, realizar_agendamento];
+=====================================================================================
+#Outros
+
+Admin:
+- Dados => [name, email, password];
+- Ações => [gerenciar o site(fazer testes, correções, etc...)];
+
+Empresa:
+- Dados => [area de atuação, interesse_em recompensa(pagar pelos descartes), valores];
+- Ações => [calcular recompensas]; 
+=====================================================================================
+#Tabelas do BD
+
+User:
+
+{
+    -name, 
+    -email, 
+    -password, 
+    -cpf, 
+    -telefone, 
+    -tipo(Catador, Civil)
+};
+
+Catador:
+
+{
+    -região,
+    -bairro,
+    -descricao(ele pode detalhar ruas ou áreas mais específicas que ele atua) 
+    -materiais de interesse(que ele coleta)
+};
+
+
+Civil:
+
+{
+    -cep,
+    -rua, 
+    -numero
+};
+
+Material:
+
+{
+    -nome,
+    -tipo,
+    -quantidade
+};
+
+
+Agendamento:
+
+{
+    -data,
+    -hora,
+    -avaliacao
+};
+
+
+Disponibilidade:
+
+{
+    -dia,
+    -horario
+};
+=======================================================================================
