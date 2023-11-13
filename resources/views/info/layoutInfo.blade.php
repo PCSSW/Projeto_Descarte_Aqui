@@ -19,7 +19,7 @@
 
         main {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -49,9 +49,9 @@
         @yield('conteudo')
     @endif
     @auth
-        <a id="back-button" href="{{route('dashboard')}}">&larr; Voltar à Página Inicial</a>  
+            <a id="back-button" href="{{route('dashboard')}}">&larr; Voltar à Página Inicial</a>  
     @else
-        <a id="back-button" href="{{route('index')}}">&larr; Voltar à Página Inicial</a>
+            <a id="back-button" href="{{route('index')}}">&larr; Voltar à Página Inicial</a>
     @endauth
 </body>
 </html>

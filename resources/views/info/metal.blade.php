@@ -1,7 +1,6 @@
 @extends('info.layoutInfo')
 @section('titulo', 'Metal')
 @section('conteudo')
-    
     <style>
         header {
             background-color: #e2d259;
