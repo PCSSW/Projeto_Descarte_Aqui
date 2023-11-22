@@ -36,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
 //Rotas Civil
     Route::get('/historico', function () {return view('site.civil.historico');});
     Route::get('/pesquisarCatador', function () {return view('site.civil.pesquisarCatador');});
-    Route::get('/perfilCatador', function () {return view('site.perfilCatador');});
+    Route::get('/perfilCatador', function () {return view('site.catador.perfilCatador');})->name('perfilCatador');
     Route::get('/meuPerfil', function () {return view('site.perfil');});
     Route::get('/verHistorico', function () {return view('site.civil.verHistorico');});
     Route::get('/agendamento', function () {return view('site.civil.agendamento');});

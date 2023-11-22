@@ -6,7 +6,7 @@
     
     <div class="row" style="display: flex; justify-content: center">
         <div class="col ms-5">
-            <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+            <img src="{{asset('storage/imagens/civil.png')}}" alt="">
         </div>
         <div class="col mt-5" style="font-size: x-large; font-weight: bold;">
             <p>{{Auth::user()->name}}</p>
@@ -22,7 +22,7 @@
                 <h4 style="font-size: x-large; font-weight: bold;">Informações:</h4>
                 <p>E-mail: {{Auth::user()->email}}</p>
                 <p>Telefone: {{Auth::user()->telefone }}</p>
-                <p>Endereço: </p>
+                <p>Endereço:  </p>
             </div>
         </div>      
     </div>

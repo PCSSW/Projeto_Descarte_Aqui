@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Endereco;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -26,9 +26,7 @@ class User extends Authenticatable
         'password',
         'endereco_id'
     ];
-    public function endereco(){
-        return $this->belongsTo('App/Models/Endereco');
-    }
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -49,5 +47,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function endereco(){
+        return $this->belongsTo(Endereco::class);
+    }
     
 }

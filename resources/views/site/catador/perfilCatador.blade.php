@@ -6,13 +6,15 @@
     
     <div class="row" style="display: flex; justify-content: center">
         <div class="col ms-5">
-            <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+            <img src="{{asset('storage/imagens/catador.png')}}" alt="">
         </div>
         <div class="col mt-5" style="font-size: x-large; font-weight: bold;">
             <p>{{Auth::user()->name}}</p>
         </div>
         <div class="col mt-5">
-            <button type="button" class="btn btn-primary">Editar</button>
+            <a href="#Em andamento...">
+                <button type="button" class="btn btn-primary">Editar</button>
+            </a>
         </div>
     </div>
     <div class="row mt-5">

@@ -8,7 +8,7 @@
     @vite(['resources/sass/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    @component('site.civil.navbarCivil')    
+    @component('site.catador.navbarCatador')
     @endcomponent
     
 </body>

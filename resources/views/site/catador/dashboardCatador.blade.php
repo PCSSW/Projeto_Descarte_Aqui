@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@extends('site.civil.layoutCivil')
+@extends('site.catador.layoutCatador')
 
 @section('content')
 <div class="container mt-5 pt-5">

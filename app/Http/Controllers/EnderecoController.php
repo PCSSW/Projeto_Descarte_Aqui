@@ -28,14 +28,14 @@ class EnderecoController extends Controller
      */
     public function store(Request $request)
     {
-        $date = new Endereco();
+        $data = new Endereco();
         $data->cidade = $request->input('cidade');
         $data->uf = $request->input('uf');
         $data->rua = $request->input('rua');
         $data->numero = $request->input('numero');
         $data->bairro = $request->input('bairro');
         $data->save();
-        return redirect('/home')->with('success', 'Endereço cadastrado com sucesso');
+        return redirect('/perfilCivil')->with('success', 'Endereço cadastrado com sucesso');
     }
 
     /**
