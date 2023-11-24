@@ -10,6 +10,8 @@
 <body>
     @component('site.catador.navbarCatador')
     @endcomponent
-    
+    @hasSection('javascript')
+        @yield('javascript')
+    @endif
 </body>
 </html>

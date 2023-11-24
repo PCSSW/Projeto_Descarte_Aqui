@@ -12,9 +12,7 @@
             <p>{{Auth::user()->name}}</p>
         </div>
         <div class="col mt-5">
-            <a href="#Em andamento...">
-                <button type="button" class="btn btn-primary">Editar</button>
-            </a>
+            
         </div>
     </div>
     <div class="row mt-5">

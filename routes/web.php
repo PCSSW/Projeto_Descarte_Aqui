@@ -34,9 +34,19 @@ Route::get('/cadastroEndereco', function () {return view('site.civil.cadastroEnd
 
 Route::middleware(['auth'])->group(function () {
 //Rotas Civil
+    //Dashboard
+    Route::get('/dashboardCivil', function () {return view('site.civil.dashboardCivil');})->name('dashboardCivil');
+
+    //Perfil
+    Route::get('/perfilCivil', function () {return view('site.civil.perfilCivil');})->name('perfilCivil');
+
+    //Endereço
+    Route::get('/cadastro/endereco', [App\Http\Controllers\EnderecoController::class, 'create'])->name('novoEndereco');
+    Route::post('/endereco', [App\Http\Controllers\EnderecoController::class, 'store'])->name('cadastroEndereco');
+
+    //Outras (ainda falta mexer...)
     Route::get('/historico', function () {return view('site.civil.historico');});
     Route::get('/pesquisarCatador', function () {return view('site.civil.pesquisarCatador');});
-    Route::get('/perfilCatador', function () {return view('site.catador.perfilCatador');})->name('perfilCatador');
     Route::get('/meuPerfil', function () {return view('site.perfil');});
     Route::get('/verHistorico', function () {return view('site.civil.verHistorico');});
     Route::get('/agendamento', function () {return view('site.civil.agendamento');});
@@ -44,11 +54,26 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/cadastroCatador', function () {return view('auth.cadastroCatador');});
     Route::get('/continuarCadastro', function () {return view('auth.continuarCadastro');});
     Route::get('/avaliar', function () {return view('site.civil.avaliar');});
+    Route::get('/teste', function() {return view('site.catador.cadastroAreadeAtuacao');});
+
+//Rotas Catador
+    //Dashboard
     Route::get('/dashboardCatador', function () {return view('site.catador.dashboardCatador');})->name('dashboardCatador');
-    Route::get('/dashboardCivil', function () {return view('site.civil.dashboardCivil');})->name('dashboardCivil');
-    Route::get('/perfilCivil', function () {return view('site.civil.perfilCivil');})->name('perfilCivil');
-    Route::get('/cadastro/endereco', [App\Http\Controllers\EnderecoController::class, 'create'])->name('novoEndereco');
-    Route::post('/endereco', [App\Http\Controllers\EnderecoController::class, 'store'])->name('cadastroEndereco');
+
+    //Perfil
+    Route::get('/perfilCatador', function () {return view('site.catador.perfilCatador');})->name('perfilCatador');
+
+    //Area de atuação
+    Route::get('/cadastro/areaDeAtuacao', [App\Http\Controllers\AreaDeAtuacaoController::class, 'create'])->name('novaAreaDeAtuacao');
+    Route::post('/areaDeAtuacao', [App\Http\Controllers\AreaDeAtuacaoController::class, 'store'])->name('cadastroAreaDeAtuacao');
+
+    //Materiais
+    Route::get('/cadastro/material', [App\Http\Controllers\MaterialController::class, 'create'])->name('novoMaterial');
+    Route::post('/material', [App\Http\Controllers\MaterialController::class, 'store'])->name('cadastroMaterial');
+
+    //Disponibilidade
+    Route::get('/cadastro/disponibilidade', [App\Http\Controllers\DisponibilidadeController::class, 'create'])->name('novaDisponibilidade');
+    Route::post('disponibilidade', [App\Http\Controllers\DisponibilidadeController::class, 'store'])->name('cadastroDisponibilidade');
 });
 
 //Route::post('/noticias', [App\Http\Controllers\noticiaController::class, 'store'])->name('gravaNovaNoticia');
