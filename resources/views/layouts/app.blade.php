@@ -22,12 +22,12 @@
             <div class="container">
                 @auth
                     <a href="{{route('dashboard')}}">
-                        <img src="{{asset('storage/imagens/logo.png')}}" alt="">
+                        <img src="{{asset('storage/images/logo.png')}}" alt="">
                         <a class="navbar-brand" href="{{route('dashboard')}}" style="font-size: xx-large; font-weight: bold; color: black; text-decoration: none">Descarte Aqui</a>
                     </a> 
                 @else
                     <a href="{{route('index')}}">
-                        <img src="{{asset('storage/imagens/logo.png')}}" alt="">
+                        <img src="{{asset('storage/images/logo.png')}}" alt="">
                         <a class="navbar-brand" href="{{route('index')}}" style="font-size: xx-large; font-weight: bold; color: black; text-decoration: none">Descarte Aqui</a>
                     </a>
                 @endauth

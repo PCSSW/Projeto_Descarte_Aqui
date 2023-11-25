@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Area_de_atuacao;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AreaDeAtuacaoController extends Controller
 {
@@ -29,6 +31,7 @@ class AreaDeAtuacaoController extends Controller
     public function store(Request $request)
     {
         $data = new Area_de_Atuacao();
+        $data->user_id = Auth::user()->id;
         $data->regiao = $request->input('regiao');
         $data->bairro = $request->input('bairro');
         $data->descricao = $request->input('descricao');

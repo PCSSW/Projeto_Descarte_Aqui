@@ -5,7 +5,7 @@
         </button>
     <div>
       <a href="/">
-        <img src="{{asset('storage/imagens/logo.png')}}" alt="">
+        <img src="{{asset('storage/images/logo.png')}}" alt="">
         <a class="navbar-brand" href="/" style="font-size: xx-large; font-weight: bold; color: black; text-decoration: none">Descarte Aqui</a>
       </a>
     </div>

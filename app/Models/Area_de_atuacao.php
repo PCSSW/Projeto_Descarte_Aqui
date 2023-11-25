@@ -13,4 +13,8 @@ class Area_de_atuacao extends Model
         'bairro',
         'descricao',
     ];
+
+    public function users(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

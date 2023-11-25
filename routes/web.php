@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboardCivil', function () {return view('site.civil.dashboardCivil');})->name('dashboardCivil');
 
     //Perfil
-    Route::get('/perfilCivil', function () {return view('site.civil.perfilCivil');})->name('perfilCivil');
+    Route::get('/perfilCivil', [\App\Http\Controllers\CivilController::class, 'perfil'])->name('perfilCivil');
 
     //Endereço
     Route::get('/cadastro/endereco', [App\Http\Controllers\EnderecoController::class, 'create'])->name('novoEndereco');
@@ -49,7 +50,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pesquisarCatador', function () {return view('site.civil.pesquisarCatador');});
     Route::get('/meuPerfil', function () {return view('site.perfil');});
     Route::get('/verHistorico', function () {return view('site.civil.verHistorico');});
-    Route::get('/agendamento', function () {return view('site.civil.agendamento');});
+    Route::get('/agendamento', [App\Http\Controllers\AgendamentoController::class, 'index'])->name('agendamento');
     Route::get('/cadastroCivil', function () {return view('auth.cadastroCivil');});
     Route::get('/cadastroCatador', function () {return view('auth.cadastroCatador');});
     Route::get('/continuarCadastro', function () {return view('auth.continuarCadastro');});
@@ -61,7 +62,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboardCatador', function () {return view('site.catador.dashboardCatador');})->name('dashboardCatador');
 
     //Perfil
-    Route::get('/perfilCatador', function () {return view('site.catador.perfilCatador');})->name('perfilCatador');
+    Route::get('/perfilCatador', [App\Http\Controllers\CatadorController::class, 'perfil'])->name('perfilCatador');
 
     //Area de atuação
     Route::get('/cadastro/areaDeAtuacao', [App\Http\Controllers\AreaDeAtuacaoController::class, 'create'])->name('novaAreaDeAtuacao');
@@ -75,5 +76,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/cadastro/disponibilidade', [App\Http\Controllers\DisponibilidadeController::class, 'create'])->name('novaDisponibilidade');
     Route::post('disponibilidade', [App\Http\Controllers\DisponibilidadeController::class, 'store'])->name('cadastroDisponibilidade');
 });
-
-//Route::post('/noticias', [App\Http\Controllers\noticiaController::class, 'store'])->name('gravaNovaNoticia');

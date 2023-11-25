@@ -8,7 +8,7 @@
             <div class="alert" style="background-color: #B9E66F;height: 13rem;">
                 <div class="row">
                     <div class="col">
-                        <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+                        <img src="{{asset('storage/images/nopicture.png')}}" alt="">
                     </div>
                     <div class="col">
                         <div class="text-center">
@@ -27,7 +27,7 @@
             <div class="alert" style="background-color: #B9E66F;height: 13rem;">
                 <div class="row">
                     <div class="col">
-                                    <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+                                    <img src="{{asset('storage/images/nopicture.png')}}" alt="">
 
                     </div>
                     <div class="col">
@@ -49,7 +49,7 @@
             <div class="alert" style="background-color: #B9E66F;height: 13rem;">
                 <div class="row">
                     <div class="col">
-                                    <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+                                    <img src="{{asset('storage/images/nopicture.png')}}" alt="">
 
                     </div>
                     <div class="col">
@@ -69,7 +69,7 @@
             <div class="alert" style="background-color: #B9E66F;height: 13rem;">
                 <div class="row">
                     <div class="col">
-                                    <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+                                    <img src="{{asset('storage/images/nopicture.png')}}" alt="">
 
                     </div>
                     <div class="col">

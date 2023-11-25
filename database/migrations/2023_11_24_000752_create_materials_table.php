@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('materials', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('material');
             $table->string('tipo_material');
             $table->timestamps();

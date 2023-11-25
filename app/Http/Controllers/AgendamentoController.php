@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Material;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class MaterialController extends Controller
+class AgendamentoController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('site.civil.agendamento');
     }
 
     /**
@@ -21,7 +23,7 @@ class MaterialController extends Controller
      */
     public function create()
     {
-        return view('site.catador.cadastroMaterial');
+        //
     }
 
     /**
@@ -29,18 +31,13 @@ class MaterialController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Material();
-        $data->material = $request->input('material');
-        $data->user_id = Auth::user()->id;
-        $data->tipo_material = $request->input('tipo_material');
-        $data->save();
-        return redirect('/home')->with('success', 'Material cadastrado com sucesso!');
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Material $material)
+    public function show(string $id)
     {
         //
     }
@@ -48,7 +45,7 @@ class MaterialController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Material $material)
+    public function edit(string $id)
     {
         //
     }
@@ -56,7 +53,7 @@ class MaterialController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Material $material)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -64,7 +61,7 @@ class MaterialController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Material $material)
+    public function destroy(string $id)
     {
         //
     }

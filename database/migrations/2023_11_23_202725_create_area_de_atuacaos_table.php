@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('area_de_atuacaos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('regiao');
             $table->string('bairro');
             $table->string('descricao');

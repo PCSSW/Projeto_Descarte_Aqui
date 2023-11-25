@@ -12,4 +12,8 @@ class Material extends Model
         'material',
         'tipo_material',
     ];
+
+    public function users(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

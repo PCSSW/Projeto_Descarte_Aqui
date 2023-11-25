@@ -49,7 +49,15 @@ class User extends Authenticatable
     ];
 
     public function endereco(){
-        return $this->belongsTo(Endereco::class);
+        return $this->hasMany('App/Models/Endereco', 'user_id');
+    }
+
+    public function area_de_atuacao(){
+        return $this->hasMany('App/Models/Area_de_atuacao', 'user_id');
+    }
+
+    public function material(){
+        return $this->hasMany('App/Models/Material', 'user_id');
     }
     
 }
