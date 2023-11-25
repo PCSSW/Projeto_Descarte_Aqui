@@ -47,7 +47,7 @@
                   <div class="col">
                       <div class="card shadow-sm">
                           <div class="bd-placeholder-img card-img-top novo-elemento" style="display: flex; justify-content: center; align-items: center; background-color: #B9E66F; width: 100%; height: 255px;">
-                              <img src="{{asset('storage/imagens/papel.png')}}" alt="">
+                              <img src="{{asset('storage/images/papel.png')}}" alt="">
                           </div>
                           <div class="fundo" style=""></div>
                           <div class="card-body">
@@ -60,7 +60,7 @@
                   <div class="col">
                       <div class="card shadow-sm">
                           <div class="bd-placeholder-img card-img-top novo-elemento" style="display: flex; justify-content: center; align-items: center; background-color: #B9E66F; width: 100%; height: 255px;">
-                              <img src="{{asset('storage/imagens/plastico.png')}}" alt="">
+                              <img src="{{asset('storage/images/plastico.png')}}" alt="">
                           </div>
                           <div class="fundo" style=""></div>
                           <div class="card-body">
@@ -73,7 +73,7 @@
                   <div class="col">
                       <div class="card shadow-sm">
                           <div class="bd-placeholder-img card-img-top novo-elemento" style="display: flex; justify-content: center; align-items: center; background-color: #B9E66F; width: 100%; height: 255px;">
-                              <img src="{{asset('storage/imagens/vidro.png')}}" alt="">
+                              <img src="{{asset('storage/images/vidro.png')}}" alt="">
                           </div>
                           <div class="fundo" style=""></div>
                           <div class="card-body">
@@ -86,7 +86,7 @@
                   <div class="col">
                       <div class="card shadow-sm">
                           <div class="bd-placeholder-img card-img-top novo-elemento" style="display: flex; justify-content: center; align-items: center; background-color: #B9E66F; width: 100%; height: 255px;">
-                              <img src="{{asset('storage/imagens/metal.png')}}" alt="">
+                              <img src="{{asset('storage/images/metal.png')}}" alt="">
                           </div>
                           <div class="fundo" style=""></div>
                           <div class="card-body">
@@ -99,7 +99,7 @@
                   <div class="col">
                       <div class="card shadow-sm">
                           <div class="bd-placeholder-img card-img-top novo-elemento" style="display: flex; justify-content: center; align-items: center; background-color: #B9E66F; width: 100%; height: 255px;">
-                              <img src="{{asset('storage/imagens/oleo.png')}}" alt="">
+                              <img src="{{asset('storage/images/oleo.png')}}" alt="">
                           </div>
                           <div class="fundo" style=""></div>
                           <div class="card-body">
@@ -112,7 +112,7 @@
                   <div class="col">
                       <div class="card shadow-sm">
                           <div class="bd-placeholder-img card-img-top novo-elemento" style="display: flex; justify-content: center; align-items: center; background-color: #B9E66F; width: 100%; height: 255px;">
-                              <img src="{{asset('storage/imagens/organico.png')}}" alt="">
+                              <img src="{{asset('storage/images/organico.png')}}" alt="">
                           </div>
                           <div class="fundo" style=""></div>
                           <div class="card-body">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Endereco;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EnderecoController extends Controller
 {
@@ -29,6 +30,7 @@ class EnderecoController extends Controller
     public function store(Request $request)
     {
         $data = new Endereco();
+        $data->user_id = Auth::user()->id;
         $data->cidade = $request->input('cidade');
         $data->uf = $request->input('uf');
         $data->rua = $request->input('rua');

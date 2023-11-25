@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboardCivil', function () {return view('site.civil.dashboardCivil');})->name('dashboardCivil');
 
     //Perfil
-    Route::get('/perfilCivil', function () {return view('site.civil.perfilCivil');})->name('perfilCivil');
+    Route::get('/perfilCivil', [\App\Http\Controllers\CivilController::class, 'perfil'])->name('perfilCivil');
 
     //Endereço
     Route::get('/cadastro/endereco', [App\Http\Controllers\EnderecoController::class, 'create'])->name('novoEndereco');

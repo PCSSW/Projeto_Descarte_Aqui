@@ -4,7 +4,7 @@
 <div class="container mt-5 pt-5">
     <div class="row">
         <div class="col">
-            <img src="{{asset('storage/imagens/nopicture.png')}}" alt="">
+            <img src="{{asset('storage/images/nopicture.png')}}" alt="">
         </div>
         <div class="col" style="font-size: x-large; font-weight: bold;">
             Magnólia

@@ -4,7 +4,7 @@
 <div class="container mt-5 pt-5">
     <div class="row mt-5">
         <div class="col-sm-8 mt-5">
-            <img src="{{asset('storage/imagens/login.png')}}" alt="Login">
+            <img src="{{asset('storage/images/login.png')}}" alt="Login">
         </div>
         <div class="col-sm-4 mt-5">
                 <div class="">

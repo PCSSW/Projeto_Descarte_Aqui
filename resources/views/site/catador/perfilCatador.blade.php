@@ -6,7 +6,7 @@
     
     <div class="row" style="display: flex; justify-content: center">
         <div class="col ms-5">
-            <img src="{{asset('storage/imagens/catador.png')}}" alt="">
+            <img src="{{asset('storage/images/catador.png')}}" alt="">
         </div>
         <div class="col mt-5" style="font-size: x-large; font-weight: bold;">
             <p>{{Auth::user()->name}}</p>
