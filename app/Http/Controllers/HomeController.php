@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Servico;
-use App\Models\User_Servico;
-use App\Models\Candidatos;
+use App\Models\Agendamento;
+use Exception;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -27,10 +26,20 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::user()->tipo == 'Civil') {
-            return view('site.civil.dashboardCivil');
+            try{
+                $data = Agendamento::all()->where('user_id', '=', Auth::user()->id);
+            }catch(Exception $error){
+                return view('site.civil.dashboardCivil');
+            }
+            return view('site.civil.dashboardCivil', compact('data'));
         }
         else if(Auth::user()->tipo == 'Catador') {
-            return view('site.catador.dashboardCatador');
+            try{
+                $data = Agendamento::all()->where('catador_id', '=', Auth::user()->id);
+            }catch(Exception $error){
+                return view('site.catador.dashboardCatador');
+            }
+            return view('site.catador.dashboardCatador', compact('data'));
         }
         else {
             return redirect('auth.register')->with('danger', 'Valor inválido!');

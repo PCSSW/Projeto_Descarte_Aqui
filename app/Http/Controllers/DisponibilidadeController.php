@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Disponibilidade;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DisponibilidadeController extends Controller
 {
@@ -29,6 +30,7 @@ class DisponibilidadeController extends Controller
     public function store(Request $request)
     {
         $data = new Disponibilidade();
+        $data->user_id = Auth::user()->id;
         $data->dia = $request->input('dia');
         $data->horario = $request->input('horario');
         $data->save();

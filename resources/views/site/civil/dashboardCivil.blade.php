@@ -14,27 +14,11 @@
                       <p class="card-text">
                           Serão listados aqui:<br>
                           <ul>
-                              <li>
-                                  Agendamento1: XXXXXXXX<br><br><br>
-                              </li>
-                              <li>
-                                  Agendamento2: XXXXXXXX<br><br><br>
-                              </li>
-                              <li>
-                                  Agendamento3: XXXXXXXX<br><br><br>
-                              </li>
-                              <li>
-                                  Agendamento4: XXXXXXXX<br><br><br>
-                              </li>
-                              <li>
-                                  Agendamento5: XXXXXXXX<br><br><br>
-                              </li>
-                              <li>
-                                  Agendamento6: XXXXXXXX<br><br><br>
-                              </li>
-                              <li>
-                                  Agendamento7: XXXXXXXX<br><br><br>
-                              </li>
+                            @foreach ($data as $item)
+                                <li>
+                                    {{$item->Material}}({{$item->Quantidade}})
+                                </li>
+                            @endforeach
                           </ul>
                       </p>
                   </div>

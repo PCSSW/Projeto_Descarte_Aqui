@@ -59,5 +59,9 @@ class User extends Authenticatable
     public function material(){
         return $this->hasMany('App/Models/Material', 'user_id');
     }
+
+    public function agendamento(){
+        return $this->hasMany('App/Models/Agendamento', 'user_id');
+    }
     
 }

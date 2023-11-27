@@ -1,49 +1,49 @@
-@extends('site.layout')
+@extends('layouts.app')
+@extends('site.civil.layoutCivil')
 @section('title', 'Descarte aqui')
-@section('body')
+@section('content')
 <div class="container mt-5 pt-5">
     <div class="row">
         <div class="col">
             <img src="{{asset('storage/images/nopicture.png')}}" alt="">
         </div>
         <div class="col" style="font-size: x-large; font-weight: bold;">
-            Magnólia
-        </div>
-        <div class="col mt-2">
-            ⭐⭐⭐⭐⭐
+            {{$data[1]->name}}
         </div>
     </div>
 <div style="display: flex; justify-content: center">
-    <form>
+    <form action="/agendamento/salvar" method="POST">
+        @csrf
         <div class="row mt-4">
             <div class="form-group col-md-6">
                 <label for="inputMaterial">Material:</label>
                 <select id="inputMaterial" class="form-control" name="material">
-                <option></option>
-                <option>...</option>
+                    @foreach ($material as $item)
+                        <option value="{{$item->material}}">{{$item->material}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputDia">Dia:</label>
                 <select id="inputDia" class="form-control" name="dia">
-                <option></option>
-                <option>...</option>
+                    @foreach ($disponibilidade as $item)
+                        <option value="{{$item->dia}}">{{$item->dia}}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
+        <input type="hidden" value="{{$data[1]->id}}" name="catador_id">
         <div class="row mt-2">
             <div class="form-group col-md-6">
                 <label for="inputMaterial">Quantidade:</label>
-                <select id="inputMaterial" class="form-control" name="quantidade">
-                <option></option>
-                <option>...</option>
-                </select>
+                <input id="inputMaterial" class="form-control" name="quantidade" type="number" >
             </div>
             <div class="form-group col-md-6">
                 <label for="inputDia">Horário:</label>
                 <select id="inputDia" class="form-control" name="horario">
-                <option></option>
-                <option>...</option>
+                    @foreach ($disponibilidade as $item)
+                        <option value="{{$item->horario}}">{{$item->horario}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group col mt-2">

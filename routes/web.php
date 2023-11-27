@@ -51,6 +51,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/meuPerfil', function () {return view('site.perfil');});
     Route::get('/verHistorico', function () {return view('site.civil.verHistorico');});
     Route::get('/agendamento', [App\Http\Controllers\AgendamentoController::class, 'index'])->name('agendamento');
+    Route::post('/agendamento/agendar', [App\Http\Controllers\AgendamentoController::class, 'agendar']);
+    Route::post('/agendamento/salvar', [App\Http\Controllers\AgendamentoController::class, 'salvar']);
     Route::get('/cadastroCivil', function () {return view('auth.cadastroCivil');});
     Route::get('/cadastroCatador', function () {return view('auth.cadastroCatador');});
     Route::get('/continuarCadastro', function () {return view('auth.continuarCadastro');});
