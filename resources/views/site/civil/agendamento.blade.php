@@ -18,14 +18,14 @@
         <div class="row mt-4">
             <div class="form-group col-md-6">
                 <label for="inputMaterial">Material:</label>
-                <select id="inputMaterial" class="form-control">
+                <select id="inputMaterial" class="form-control" name="material">
                 <option></option>
                 <option>...</option>
                 </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputDia">Dia:</label>
-                <select id="inputDia" class="form-control">
+                <select id="inputDia" class="form-control" name="dia">
                 <option></option>
                 <option>...</option>
                 </select>
@@ -34,27 +34,27 @@
         <div class="row mt-2">
             <div class="form-group col-md-6">
                 <label for="inputMaterial">Quantidade:</label>
-                <select id="inputMaterial" class="form-control">
+                <select id="inputMaterial" class="form-control" name="quantidade">
                 <option></option>
                 <option>...</option>
                 </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputDia">Horário:</label>
-                <select id="inputDia" class="form-control">
+                <select id="inputDia" class="form-control" name="horario">
                 <option></option>
                 <option>...</option>
                 </select>
             </div>
             <div class="form-group col mt-2">
                 <label for="textareaObs">Obs:</label>
-                <textarea class="form-control" id="textareaObs" cols="30" rows="3"></textarea>
+                <textarea class="form-control" id="textareaObs" cols="30" rows="3" name="obs"></textarea>
             </div>
         </div>
         <div style="display: flex; justify-content: center">
             <div class="row">
                 <div class="form-check mt-4" style="display: flex; justify-content: center">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" require>
                     <label class="form-check-label" for="gridCheck" style="font-size: 1rem">
                         Usar endereço cadastrado
                     </label>

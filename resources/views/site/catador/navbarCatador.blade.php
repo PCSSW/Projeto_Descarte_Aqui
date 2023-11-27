@@ -30,11 +30,6 @@
                   <a class="nav-link active fs-4" aria-current="page" href="{{route('novaDisponibilidade')}}">Disponibilidade semanal</a>
               </div>
             </li>
-            <li class="nav-item">
-              <div class="size-menu">
-                <a class="nav-link active fs-4" aria-current="page" href="{{route('agendamento')}}">Realizar agendamento</a>
-              </div>
-            </li>
         </ul>
       </div>
     </div>
