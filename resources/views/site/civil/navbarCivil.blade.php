@@ -22,17 +22,17 @@
             </li>
             <li class="nav-item">
               <div class="size-menu">
-                  <a class="nav-link active fs-4" aria-current="page" href="#Cadastre-se ou faça login para acessar">Realizar pedido de descarte</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <div class="size-menu">
                   <a class="nav-link active fs-4" aria-current="page" href="#Cadastre-se ou faça login para acessar">Avaliar catador</a>
               </div>
             </li>
             <li class="nav-item">
               <div class="size-menu">
                   <a class="nav-link active fs-4" aria-current="page" href="#Cadastre-se ou faça login para acessar">Configurações</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="size-menu">
+                  <a class="nav-link active fs-4" aria-current="page" href="/agendamento">Realizar agendamento</a>
               </div>
             </li>
         </ul>
